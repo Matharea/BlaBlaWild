@@ -75,6 +75,8 @@
         android:ems="10"
         android:inputType="date"
         android:hint="@string/dateInput"
+        android:focusable="false"
+        android:clickable="true"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/dateTxt" />
 
