@@ -38,10 +38,9 @@ public class ItinerarySearchActivity extends AppCompatActivity {
                 if(TextUtils.isEmpty(departure.getText().toString()) || TextUtils.isEmpty(destination.getText().toString())){
                     Toast.makeText(context, R.string.toast, duration).show();
                 }else{
+                    SearchModel searchModel = new SearchModel(departure.getText().toString(), destination.getText().toString(), edittext.getText().toString());
                     Intent i = new Intent(ItinerarySearchActivity.this, ItineraryListActivity.class);
-                    i.putExtra(getString(R.string.departure),departure.getText().toString());
-                    i.putExtra(getString(R.string.destination), destination.getText().toString());
-                    i.putExtra(getString(R.string.dateTxt), edittext.getText().toString());
+                    i.putExtra("trip", searchModel);
                     startActivity(i);
                 }
         };
